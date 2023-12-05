@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disease Prediction</title>
+    <hr>
+</head>
+<body>
+    <h1>Disease Prediction from Symptoms</h1>
+    <form action="/predict" method="post">
+        
+            <input type="checkbox" name="itching" value="{{ itching }}"> {{ itching }}<br>
+            <input type="checkbox" name="skin_rash" value="{{ skin_rash }}"> {{ skin_rash }}<br>
+            <input type="checkbox" name="nodal_skin_eruptions" value="{{ nodal_skin_eruptions }}"> {{ nodal_skin_eruptions }}<br>
+            <input type="checkbox" name="continuous_sneezing" value="{{ continuous_sneezing }}"> {{ continuous_sneezing }}<br>
+            <input type="checkbox" name="shivering" value="{{ shivering }}"> {{ shivering }}<br>
+            <input type="checkbox" name="chills" value="{{ chills }}"> {{ chills }}<br>
+            <input type="checkbox" name="joint_pain" value="{{ joint_pain }}"> {{ joint_pain }}<br>
+            <input type="checkbox" name="stomach_pain" value="{{ stomach_pain }}"> {{ stomach_pain }}<br>
+            <input type="checkbox" name="acidity" value="{{ acidity }}"> {{ acidity }}<br>
+            <input type="checkbox" name="ulcers_on_tongue" value="{{ ulcers_on_tongue }}"> {{ ulcers_on_tongue }}<br>
+            <input type="checkbox" name="muscle_wasting" value="{{ muscle_wasting }}"> {{ muscle_wasting }}<br>
+            <input type="checkbox" name="vomiting" value="{{ vomiting }}"> {{ vomiting }}<br>
+            <input type="checkbox" name="burning_micturition" value="{{ burning_micturition }}"> {{ burning_micturition }}<br>
+            <input type="checkbox" name="spotting_ urination" value="{{ spotting_ urination }}"> {{ spotting_ urination }}<br>
+            <input type="checkbox" name="fatigue" value="{{ fatigue }}"> {{ fatigue }}<br>
+            <input type="checkbox" name="weight_gain" value="{{ weight_gain }}"> {{ weight_gain }}<br>
+            <input type="checkbox" name="anxiety" value="{{ anxiety }}"> {{ anxiety }}<br>
+            <input type="checkbox" name="cold_hands_and_feets" value="{{ cold_hands_and_feets }}"> {{ cold_hands_and_feets }}<br>
+            <input type="checkbox" name="mood_swings" value="{{ mood_swings }}"> {{ mood_swings }}<br>
+            <input type="checkbox" name="weight_loss" value="{{ weight_loss }}"> {{ weight_loss }}<br>
+            <input type="checkbox" name="restlessness" value="{{ restlessness }}"> {{ restlessness }}<br>
+            <input type="checkbox" name="lethargy" value="{{ lethargy }}"> {{ lethargy }}<br>
+            <input type="checkbox" name="patches_in_throat" value="{{ patches_in_throat }}"> {{ patches_in_throat }}<br>
+            <input type="checkbox" name="irregular_sugar_level" value="{{ irregular_sugar_level }}"> {{ irregular_sugar_level }}<br>
+            <input type="checkbox" name="cough" value="{{ cough  }}"> {{ cough }}<br>
+            <input type="checkbox" name="high_fever" value="{{ high_fever  }}"> {{ high_fever }}<br>
+            <input type="checkbox" name="sunken_eyes" value="{{ sunken_eyes }}"> {{ sunken_eyes }}<br>
+            <input type="checkbox" name="breathlessness" value="{{ breathlessness }}"> {{ breathlessness }}<br>
+            <input type="checkbox" name="sweating" value="{{ sweating }}"> {{ sweating }}<br>
+            <input type="checkbox" name="dehydration" value="{{ dehydration }}"> {{ dehydration }}<br>
+            <input type="checkbox" name="indigestion" value="{{ indigestion }}"> {{ indigestion }}<br>
+            <input type="checkbox" name="headache" value="{{ headache }}"> {{ headache }}<br>
+            <input type="checkbox" name="yellowish_skin" value="{{ yellowish_skin }}"> {{ yellowish_skin }}<br>
+            <input type="checkbox" name="dark_urine" value="{{ dark_urine }}"> {{ dark_urine }}<br>
+            <input type="checkbox" name="nausea" value="{{ nausea }}"> {{ nausea }}<br>
+            <input type="checkbox" name="loss_of_appetite" value="{{ loss_of_appetite }}"> {{ loss_of_appetite }}<br>
+            <input type="checkbox" name="pain_behind_the_eyes" value="{{ pain_behind_the_eyes }}"> {{ pain_behind_the_eyes }}<br>
+            <input type="checkbox" name="back_pain" value="{{ back_pain }}"> {{ back_pain }}<br>
+            <input type="checkbox" name="constipation" value="{{ constipation }}"> {{ constipation }}<br>
+            <input type="checkbox" name="abdominal_pain" value="{{ abdominal_pain }}"> {{ abdominal_pain }}<br>
+            <input type="checkbox" name="diarrhoea" value="{{ diarrhoea }}"> {{ diarrhoea }}<br>
+            <input type="checkbox" name="mild_fever" value="{{ mild_fever }}"> {{ mild_fever }}<br>
+            <input type="checkbox" name="yellow_urine" value="{{ yellow_urine }}"> {{ yellow_urine }}<br>
+            <input type="checkbox" name="yellowing_of_eyes" value="{{ yellowing_of_eyes }}"> {{ yellowing_of_eyes }}<br>
+            <input type="checkbox" name="acute_liver_failure" value="{{ acute_liver_failure }}"> {{ acute_liver_failure }}<br>
+            <input type="checkbox" name="fluid_overload" value="{{ fluid_overload }}"> {{ fluid_overload }}<br>
+            <input type="checkbox" name="swelling_of_stomach" value="{{ swelling_of_stomach }}"> {{ swelling_of_stomach }}<br>
+            <input type="checkbox" name="swelled_lymph_nodes" value="{{ swelled_lymph_nodes }}"> {{ swelled_lymph_nodes }}<br>
+            <input type="checkbox" name="malaise" value="{{ malaise }}"> {{ malaise }}<br>
+            <input type="checkbox" name="blurred_and_distorted_vision" value="{{ blurred_and_distorted_vision }}"> {{ blurred_and_distorted_vision }}<br>
+            <input type="checkbox" name="phlegm" value="{{ phlegm }}"> {{ phlegm }}<br>
+            <input type="checkbox" name="throat_irritation" value="{{ throat_irritation }}"> {{ throat_irritation }}<br>
+            <input type="checkbox" name="redness_of_eyes" value="{{ redness_of_eyes }}"> {{ redness_of_eyes }}<br>
+            <input type="checkbox" name="sinus_pressure" value="{{ sinus_pressure }}"> {{ sinus_pressure }}<br>
+            <input type="checkbox" name="runny_nose" value="{{ runny_nose }}"> {{ runny_nose }}<br>
+            <input type="checkbox" name="congestion" value="{{ congestion }}"> {{ congestion }}<br>
+            <input type="checkbox" name="chest_pain" value="{{ chest_pain }}"> {{ chest_pain }}<br>
+            <input type="checkbox" name="weakness_in_limbs" value="{{ weakness_in_limbs }}"> {{ weakness_in_limbs }}<br>
+            <input type="checkbox" name="fast_heart_rate" value="{{ fast_heart_rate }}"> {{ fast_heart_rate }}<br>
+            <input type="checkbox" name="pain_during_bowel_movements" value="{{ pain_during_bowel_movements }}"> {{ pain_during_bowel_movements }}<br>
+            <input type="checkbox" name="pain_in_anal_region" value="{{ pain_in_anal_region }}"> {{ pain_in_anal_region }}<br>
+            <input type="checkbox" name="bloody_stool" value="{{ bloody_stool }}"> {{ bloody_stool }}<br>
+            <input type="checkbox" name="irritation_in_anus" value="{{ irritation_in_anus }}"> {{ irritation_in_anus }}<br>
+            <input type="checkbox" name="neck_pain" value="{{ neck_pain }}"> {{ neck_pain }}<br>
+            <input type="checkbox" name="dizziness" value="{{ dizziness }}"> {{ dizziness }}<br>
+            <input type="checkbox" name="cramps" value="{{ cramps }}"> {{ cramps }}<br>
+            <input type="checkbox" name="bruising" value="{{ bruising }}"> {{ bruising }}<br>
+            <input type="checkbox" name="obesity" value="{{ obesity }}"> {{ obesity }}<br>
+            <input type="checkbox" name="swollen_legs" value="{{ swollen_legs }}"> {{ swollen_legs }}<br>
+            <input type="checkbox" name="swollen_blood_vessels" value="{{ swollen_blood_vessels }}"> {{ swollen_blood_vessels }}<br>
+            <input type="checkbox" name="puffy_face_and_eyes" value="{{ puffy_face_and_eyes }}"> {{ puffy_face_and_eyes }}<br>
+            <input type="checkbox" name="enlarged_thyroid" value="{{ enlarged_thyroid }}"> {{ enlarged_thyroid }}<br>
+            <input type="checkbox" name="brittle_nails" value="{{ brittle_nails }}"> {{ brittle_nails }}<br>
+            <input type="checkbox" name="swollen_extremeties" value="{{ swollen_extremeties }}"> {{ swollen_extremeties }}<br>
+            <input type="checkbox" name="excessive_hunger" value="{{ excessive_hunger }}"> {{ excessive_hunger }}<br>
+            <input type="checkbox" name="extra_marital_contacts" value="{{ extra_marital_contacts }}"> {{ extra_marital_contacts }}<br>
+            <input type="checkbox" name="drying_and_tingling_lips" value="{{ drying_and_tingling_lips }}"> {{ drying_and_tingling_lips }}<br>
+            <input type="checkbox" name="slurred_speech" value="{{ slurred_speech }}"> {{ slurred_speech }}<br>
+            <input type="checkbox" name="knee_pain" value="{{ knee_pain }}"> {{ knee_pain }}<br>
+            <input type="checkbox" name="hip_joint_pain" value="{{ hip_joint_pain }}"> {{ hip_joint_pain }}<br>
+            <input type="checkbox" name="muscle_weakness" value="{{ muscle_weakness }}"> {{ muscle_weakness }}<br>
+            <input type="checkbox" name="stiff_neck" value="{{ stiff_neck }}"> {{ stiff_neck }}<br>
+            <input type="checkbox" name="swelling_joints" value="{{ swelling_joints }}"> {{ swelling_joints }}<br>
+            <input type="checkbox" name="movement_stiffness" value="{{ movement_stiffness }}"> {{ movement_stiffness }}<br>
+            <input type="checkbox" name="spinning_movements" value="{{ spinning_movements }}"> {{ spinning_movements }}<br>
+            <input type="checkbox" name="loss_of_balance" value="{{ loss_of_balance }}"> {{ loss_of_balance }}<br>
+            <input type="checkbox" name="unsteadiness" value="{{ unsteadiness }}"> {{ unsteadiness }}<br>
+            <input type="checkbox" name="weakness_of_one_body_side" value="{{ weakness_of_one_body_side }}"> {{ weakness_of_one_body_side }}<br>
+            <input type="checkbox" name="loss_of_smell" value="{{ loss_of_smell }}"> {{ loss_of_smell }}<br>
+            <input type="checkbox" name="bladder_discomfort" value="{{ bladder_discomfort }}"> {{ bladder_discomfort }}<br>
+            <input type="checkbox" name="foul_smell_of urine" value="{{ foul_smell_of urine }}"> {{ foul_smell_of urine }}<br>
+            <input type="checkbox" name="continuous_feel_of_urine" value="{{ continuous_feel_of_urine }}"> {{ continuous_feel_of_urine }}<br>
+            <input type="checkbox" name="passage_of_gases" value="{{ passage_of_gases }}"> {{ passage_of_gases }}<br>
+            <input type="checkbox" name="internal_itching" value="{{ internal_itching }}"> {{ internal_itching }}<br>
+            <input type="checkbox" name="toxic_look_(typhos)" value="{{ toxic_look_(typhos) }}"> {{ toxic_look_(typhos) }}<br>
+            <input type="checkbox" name="depression" value="{{ depression }}"> {{ depression }}<br>
+            <input type="checkbox" name="irritability" value="{{ irritability }}"> {{ irritability }}<br>
+            <input type="checkbox" name="muscle_pain" value="{{ muscle_pain }}"> {{ muscle_pain }}<br>
+            <input type="checkbox" name="altered_sensorium" value="{{ altered_sensorium }}"> {{ altered_sensorium }}<br>
+            <input type="checkbox" name="red_spots_over_body" value="{{ red_spots_over_body }}"> {{ red_spots_over_body }}<br>
+            <input type="checkbox" name="belly_pain" value="{{ belly_pain }}"> {{ belly_pain }}<br>
+            <input type="checkbox" name="abnormal_menstruation" value="{{ abnormal_menstruation }}"> {{ abnormal_menstruation }}<br>
+            <input type="checkbox" name="dischromic _patches" value="{{ dischromic _patches }}"> {{ dischromic _patches }}<br>
+            <input type="checkbox" name="watering_from_eyes" value="{{ watering_from_eyes }}"> {{ watering_from_eyes }}<br>
+            <input type="checkbox" name="increased_appetite" value="{{ increased_appetite }}"> {{ increased_appetite }}<br>
+            <input type="checkbox" name="polyuria" value="{{ polyuria }}"> {{ polyuria }}<br>
+            <input type="checkbox" name="family_history" value="{{ family_history }}"> {{ family_history }}<br>
+            <input type="checkbox" name="mucoid_sputum" value="{{ mucoid_sputum }}"> {{ mucoid_sputum }}<br>
+            <input type="checkbox" name="rusty_sputum" value="{{ rusty_sputum }}"> {{ rusty_sputum }}<br>
+            <input type="checkbox" name="lack_of_concentration" value="{{ lack_of_concentration }}"> {{ lack_of_concentration }}<br>
+            <input type="checkbox" name="visual_disturbances" value="{{ visual_disturbances }}"> {{ visual_disturbances }}<br>
+            <input type="checkbox" name="receiving_blood_transfusion" value="{{ receiving_blood_transfusion }}"> {{ receiving_blood_transfusion }}<br>
+            <input type="checkbox" name="receiving_unsterile_injections" value="{{ receiving_unsterile_injections }}"> {{ receiving_unsterile_injections }}<br>
+            <input type="checkbox" name="coma" value="{{ coma }}"> {{ coma }}<br>
+            <input type="checkbox" name="stomach_bleeding" value="{{ stomach_bleeding }}"> {{ stomach_bleeding }}<br>
+            <input type="checkbox" name="distention_of_abdomen" value="{{ distention_of_abdomen }}"> {{ distention_of_abdomen }}<br>
+            <input type="checkbox" name="history_of_alcohol_consumption" value="{{ history_of_alcohol_consumption }}"> {{ history_of_alcohol_consumption }}<br>
+            <input type="checkbox" name="fluid_overload.1" value="{{ fluid_overload.1 }}"> {{ fluid_overload.1 }}<br>
+            <input type="checkbox" name="blood_in_sputum" value="{{ blood_in_sputum }}"> {{ blood_in_sputum }}<br>
+            <input type="checkbox" name="prominent_veins_on_calf" value="{{ prominent_veins_on_calf }}"> {{ prominent_veins_on_calf }}<br>
+            <input type="checkbox" name="palpitations" value="{{ palpitations }}"> {{ palpitations }}<br>
+            <input type="checkbox" name="painful_walking" value="{{ painful_walking }}"> {{ painful_walking }}<br>
+            <input type="checkbox" name="pus_filled_pimples" value="{{ pus_filled_pimples }}"> {{ pus_filled_pimples }}<br>
+            <input type="checkbox" name="blackheads" value="{{ blackheads }}"> {{ blackheads }}<br>
+            <input type="checkbox" name="scurring" value="{{ scurring }}"> {{ scurring }}<br>
+            <input type="checkbox" name="skin_peeling" value="{{ skin_peeling }}"> {{ skin_peeling }}<br>
+            <input type="checkbox" name="silver_like_dusting" value="{{ silver_like_dusting }}"> {{ silver_like_dusting }}<br>
+            <input type="checkbox" name="small_dents_in_nails" value="{{ small_dents_in_nails }}"> {{ small_dents_in_nails }}<br>
+            <input type="checkbox" name="inflammatory_nails" value="{{ inflammatory_nails }}"> {{ inflammatory_nails }}<br>
+            <input type="checkbox" name="blister" value="{{ blister }}"> {{ blister }}<br>
+            <input type="checkbox" name="red_sore_around_nose" value="{{ red_sore_around_nose }}"> {{ red_sore_around_nose }}<br>
+            <input type="checkbox" name="yellow_crust_ooze" value="{{ yellow_crust_ooze }}"> {{ yellow_crust_ooze }}<br>
+            
+           
+           
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
